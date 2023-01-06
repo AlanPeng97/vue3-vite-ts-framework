@@ -1,0 +1,15 @@
+{
+  // 本配置文件仅在当前项目生效，且优先级高于 vscode 的用户配置
+  // 启用 eslint (用户配置默认为启用。防止 vscode 用户配置主动禁用 eslint)
+  "eslint.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true, // eslint 保存文件时自动修复语法
+    "source.fixAll.stylelint": true,  // stylelint 保存文件时自动修复 css 语法、样式
+  },
+  // prettier 保存时自动格式化样式
+  "editor.formatOnSave": true,
+  // prettier 默认格式化工具选择
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // stylelint 校验的文件格式
+  "stylelint.validate": ["css", "scss", "vue", "html"],
+}

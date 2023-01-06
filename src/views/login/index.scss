@@ -1,0 +1,27 @@
+.login-container {
+  height: 100%;
+  min-height: 500px;
+  background-image: url("@/assets/images/login_bg.svg");
+  background-size: cover;
+  .login-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 50px;
+    border-radius: 10px;
+    width: 30%;
+    min-width: 550px;
+    background-color: hsl(0deg 0% 100%/80%);
+    .login-form {
+      .login-btn {
+        display: flex;
+        justify-content: center;
+        .el-button {
+          width: 100px;
+        }
+      }
+    }
+  }
+}

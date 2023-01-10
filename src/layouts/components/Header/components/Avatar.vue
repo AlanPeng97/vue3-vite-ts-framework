@@ -1,6 +1,6 @@
 <template>
   <el-dropdown>
-    <span><el-avatar :icon="UserFilled" /> <span class="username">张三</span></span>
+    <span><el-avatar :icon="UserFilled" /> <span class="username">user</span></span>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item>修改密码</el-dropdown-item>

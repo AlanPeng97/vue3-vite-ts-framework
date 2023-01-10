@@ -1,7 +1,7 @@
 // ? 全局不动配置项 只做导出不做修改
 
 // ** 首页地址（默认）
-export const HOME_URL: string = "/home"; // 原本是/home/index
+export const HOME_URL: string = "/home/index";
 
 // ** 登陆页地址（默认）
 export const LOGIN_URL: string = "/login";

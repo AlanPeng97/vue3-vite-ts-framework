@@ -3,7 +3,7 @@
     <el-aside>
       <div class="menu">
         <div class="logo flx-center">
-          <span>微发现</span>
+          <span>Simply Admin</span>
         </div>
         <el-scrollbar>
           <el-menu
@@ -30,23 +30,14 @@
 </template>
 
 <script setup lang="ts">
-import {} from "vue";
+import { computed } from "vue";
 import ToolBarRight from "@/layouts/components/Header/ToolBarRight.vue";
 import ToolBarLeft from "@/layouts/components/Header/ToolBarLeft.vue";
 import SubMenu from "@/layouts/components/Menu/SubMenu.vue";
-import { getAuthMenuListApi } from "@/api/login/login";
+import { AuthStore } from "@/store/modules/auth";
 
-const { data } = getAuthMenuListApi();
-console.log(data);
-let menuList = getShowMenuList(data);
-console.log(menuList);
-function getShowMenuList(menuList: any) {
-  let newMenuList: any = JSON.parse(JSON.stringify(menuList));
-  return newMenuList.filter((item: any) => {
-    item.children?.length && (item.children = getShowMenuList(item.children));
-    return !item.meta?.isHide;
-  });
-}
+const authStore = AuthStore();
+const menuList = computed(() => authStore.showMenuListGet);
 </script>
 
 <style lang="scss" scoped>
